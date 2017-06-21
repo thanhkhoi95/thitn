@@ -1,0 +1,13 @@
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\bin\Debug\THITN.exe
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\bin\Debug\THITN.pdb
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.csprojResolveAssemblyReference.cache
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmMain.resources
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.Properties.Resources.resources
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.csproj.GenerateResource.Cache
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.exe.licenses
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.exe
+c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.pdb
+C:\Users\MyPC\Documents\Visual Studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmDangNhap.resources
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\bin\Debug\THITN.exe.config
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmMonHoc.resources
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmGiaoVien.resources
