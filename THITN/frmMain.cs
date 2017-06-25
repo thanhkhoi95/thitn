@@ -141,5 +141,22 @@ namespace THITN
             }
         }
 
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmLop));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmLop f = new frmLop();
+                f.MdiParent = this;
+                f.Text = "Quản lí lớp học";
+                f.Show();
+            }
+
+        }
+
     }
 }

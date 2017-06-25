@@ -41,6 +41,7 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.rpHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.rpgDuLieu = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -54,7 +55,6 @@
             this.tsMaNguoiDung = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsTenNguoiDung = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsNhomQuyen = new System.Windows.Forms.ToolStripStatusLabel();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.rcMain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.statusStrip.SuspendLayout();
@@ -151,6 +151,7 @@
             this.barButtonItem2.LargeWidth = 90;
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
             // 
             // barButtonItem4
             // 
@@ -177,6 +178,14 @@
             this.barButtonItem5.Id = 14;
             this.barButtonItem5.Name = "barButtonItem5";
             this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            // 
+            // barButtonItem3
+            // 
+            this.barButtonItem3.Caption = "Bảng điểm";
+            this.barButtonItem3.Glyph = global::THITN.Properties.Resources.grades;
+            this.barButtonItem3.Id = 15;
+            this.barButtonItem3.Name = "barButtonItem3";
+            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // rpHeThong
             // 
@@ -283,14 +292,6 @@
             // 
             this.tsNhomQuyen.Name = "tsNhomQuyen";
             this.tsNhomQuyen.Size = new System.Drawing.Size(0, 17);
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Bảng điểm";
-            this.barButtonItem3.Glyph = global::THITN.Properties.Resources.grades;
-            this.barButtonItem3.Id = 15;
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // frmMain
             // 

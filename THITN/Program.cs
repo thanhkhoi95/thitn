@@ -49,9 +49,9 @@ namespace THITN
                 return 1;
             }
 
-            catch (Exception e)
+            catch (Exception)
             {
-                MessageBox.Show("Lỗi kết nối cơ sở dữ liệu.\nBạn xem lại user name và password.\n " + e.Message, "", MessageBoxButtons.OK);
+                MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu. Vui lòng thử lại.\n", "Thông báo" , MessageBoxButtons.OK);
                 return 0;
             }
         }

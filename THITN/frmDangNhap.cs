@@ -24,6 +24,24 @@ namespace THITN
 
         }
 
+        private void tbMatKhau_TextChanged(object sender, System.EventArgs e)
+        {
+            if (tbMatKhau.ReadOnly == true) return;
+            try
+            {
+                Int32.Parse(this.tbMatKhau.Text);
+            }
+            catch (FormatException )
+            {
+                MessageBox.Show("Chi duoc nhap so");
+                if (tbMatKhau.Text.ToString().Trim().Length == 0) return;
+                tbMatKhau.ReadOnly = true;
+                tbMatKhau.Text = tbMatKhau.Text.ToString().Trim().Substring(0, tbMatKhau.Text.ToString().Trim().Length - 1);
+                tbMatKhau.ReadOnly = false;
+                tbMatKhau.SelectionStart = tbMatKhau.Text.Length;
+            }
+        }
+
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
             String strLenh;
@@ -39,7 +57,7 @@ namespace THITN
                 }
                 catch (InvalidOperationException)
                 {
-                    MessageBox.Show("Login đăng nhập chưa có quyền truy cập");
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu. Vui lòng thử lại.\n", "Thông báo", MessageBoxButtons.OK);
                     return;
                 }
                 if (Program.myReader.Read())
@@ -53,18 +71,24 @@ namespace THITN
                         this.Close();
                         Program.mainForm.DangNhapThanhCong();
                     }
-                    catch (Exception ex)
+                    catch (Exception)
                     {
+                        Program.mlogin = null;
                         Program.mHoten = null;
-                        MessageBox.Show("Login nay chua co username.\n" + ex.Message, "Thong bao", MessageBoxButtons.OK);
+                        Program.password = null;
+                        MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu. Vui lòng thử lại.\n", "Thông báo", MessageBoxButtons.OK);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Lỗi xác định nhóm quyền của nhân viên. ", "", MessageBoxButtons.OK);
+                    Program.mlogin = null;
+                    Program.mHoten = null;
+                    Program.password = null;
+                    MessageBox.Show("Sai tên đăng nhập hoặc mật khẩu. Vui lòng thử lại.\n", "Thông báo", MessageBoxButtons.OK);
                     return;
                 }
-            }
+                Program.myReader.Close();
+            }   
         }
     }
 }

@@ -35,6 +35,7 @@
             System.Windows.Forms.Label sODTLLLabel;
             System.Windows.Forms.Label dIACHILabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGiaoVien));
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.btnThem = new DevExpress.XtraBars.BarButtonItem();
@@ -60,6 +61,7 @@
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colACTIVE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbMatKhau = new System.Windows.Forms.TextBox();
             this.btnHoanTat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
             this.tbMaGV = new DevExpress.XtraEditors.TextEdit();
@@ -68,11 +70,14 @@
             this.tbSoDienThoai = new DevExpress.XtraEditors.TextEdit();
             this.tbDiaChi = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
+            this.giaovienBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cHUYENDEDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             mAGVLabel = new System.Windows.Forms.Label();
             hOLabel = new System.Windows.Forms.Label();
             tENLabel = new System.Windows.Forms.Label();
             sODTLLLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
+            this.lbMatKhau = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUYEN_DEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovienBindingSource)).BeginInit();
@@ -84,6 +89,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTen.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSoDienThoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDiaChi.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giaovienBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHUYENDEDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mAGVLabel
@@ -135,6 +142,17 @@
             dIACHILabel.Size = new System.Drawing.Size(43, 13);
             dIACHILabel.TabIndex = 18;
             dIACHILabel.Text = "Địa chỉ:";
+            // 
+            // lbMatKhau
+            // 
+            lbMatKhau.AutoSize = true;
+            lbMatKhau.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            lbMatKhau.Location = new System.Drawing.Point(419, 77);
+            lbMatKhau.Name = "lbMatKhau";
+            lbMatKhau.Size = new System.Drawing.Size(55, 13);
+            lbMatKhau.TabIndex = 18;
+            lbMatKhau.Text = "Mật khẩu:";
+            lbMatKhau.Visible = false;
             // 
             // barManager1
             // 
@@ -286,7 +304,9 @@
             // giaovienGridControl
             // 
             this.giaovienGridControl.DataSource = this.giaovienBindingSource;
-            this.giaovienGridControl.Dock = System.Windows.Forms.DockStyle.Top;
+            gridLevelNode1.RelationName = "Level1";
+            this.giaovienGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1});
             this.giaovienGridControl.Location = new System.Drawing.Point(0, 24);
             this.giaovienGridControl.MainView = this.gridView1;
             this.giaovienGridControl.MenuManager = this.barManager1;
@@ -307,6 +327,10 @@
             this.colACTIVE});
             this.gridView1.GridControl = this.giaovienGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
+            this.gridView1.OptionsCustomization.AllowColumnMoving = false;
+            this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsCustomization.AllowQuickHideColumns = false;
             // 
             // colMAGV
             // 
@@ -389,11 +413,14 @@
             this.colACTIVE.OptionsColumn.AllowShowHide = false;
             this.colACTIVE.OptionsColumn.ShowInCustomizationForm = false;
             this.colACTIVE.OptionsColumn.ShowInExpressionEditor = false;
+            this.colACTIVE.UnboundExpression = "True";
+            this.colACTIVE.UnboundType = DevExpress.Data.UnboundColumnType.Boolean;
             this.colACTIVE.Visible = true;
             this.colACTIVE.VisibleIndex = 5;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.tbMatKhau);
             this.panel1.Controls.Add(this.btnHoanTat);
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(mAGVLabel);
@@ -404,14 +431,27 @@
             this.panel1.Controls.Add(this.tbTen);
             this.panel1.Controls.Add(sODTLLLabel);
             this.panel1.Controls.Add(this.tbSoDienThoai);
+            this.panel1.Controls.Add(lbMatKhau);
             this.panel1.Controls.Add(dIACHILabel);
             this.panel1.Controls.Add(this.tbDiaChi);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 250);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 251);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(899, 139);
             this.panel1.TabIndex = 6;
+            // 
+            // tbMatKhau
+            // 
+            this.tbMatKhau.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.tbMatKhau.Location = new System.Drawing.Point(491, 74);
+            this.tbMatKhau.Name = "tbMatKhau";
+            this.tbMatKhau.Size = new System.Drawing.Size(100, 21);
+            this.tbMatKhau.TabIndex = 21;
+            this.tbMatKhau.UseSystemPasswordChar = true;
+            this.tbMatKhau.Visible = false;
+            this.tbMatKhau.WordWrap = false;
+            this.tbMatKhau.Visible = false;
             // 
             // btnHoanTat
             // 
@@ -420,7 +460,7 @@
             this.btnHoanTat.Location = new System.Drawing.Point(706, 113);
             this.btnHoanTat.Name = "btnHoanTat";
             this.btnHoanTat.Size = new System.Drawing.Size(75, 23);
-            this.btnHoanTat.TabIndex = 21;
+            this.btnHoanTat.TabIndex = 22;
             this.btnHoanTat.Text = "Hoàn tất";
             this.btnHoanTat.UseVisualStyleBackColor = true;
             this.btnHoanTat.Click += new System.EventHandler(this.btnHoanTat_Click);
@@ -432,7 +472,7 @@
             this.btnHuy.Location = new System.Drawing.Point(803, 113);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 23);
-            this.btnHuy.TabIndex = 20;
+            this.btnHuy.TabIndex = 23;
             this.btnHuy.Text = "Hủy";
             this.btnHuy.UseVisualStyleBackColor = true;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
@@ -461,7 +501,7 @@
             // 
             this.tbTen.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.giaovienBindingSource, "TEN", true));
             this.tbTen.Enabled = false;
-            this.tbTen.Location = new System.Drawing.Point(467, 43);
+            this.tbTen.Location = new System.Drawing.Point(491, 43);
             this.tbTen.MenuManager = this.barManager1;
             this.tbTen.Name = "tbTen";
             this.tbTen.Size = new System.Drawing.Size(100, 20);
@@ -497,6 +537,16 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Thông tin chi tiết:";
             // 
+            // giaovienBindingSource1
+            // 
+            this.giaovienBindingSource1.DataMember = "Giaovien";
+            this.giaovienBindingSource1.DataSource = this.cHUYENDEDataSetBindingSource;
+            // 
+            // cHUYENDEDataSetBindingSource
+            // 
+            this.cHUYENDEDataSetBindingSource.DataSource = this.cHUYEN_DEDataSet;
+            this.cHUYENDEDataSetBindingSource.Position = 0;
+            // 
             // frmGiaoVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -523,6 +573,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbTen.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbSoDienThoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbDiaChi.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giaovienBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cHUYENDEDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -563,5 +615,9 @@
         private DevExpress.XtraEditors.TextEdit tbTen;
         private DevExpress.XtraEditors.TextEdit tbSoDienThoai;
         private DevExpress.XtraEditors.TextEdit tbDiaChi;
+        private System.Windows.Forms.TextBox tbMatKhau;
+        private System.Windows.Forms.BindingSource giaovienBindingSource1;
+        private System.Windows.Forms.BindingSource cHUYENDEDataSetBindingSource;
+        private System.Windows.Forms.Label lbMatKhau;
     }
 }

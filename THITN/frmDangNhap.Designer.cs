@@ -73,7 +73,7 @@
             this.tbMatKhau.Name = "tbMatKhau";
             this.tbMatKhau.Size = new System.Drawing.Size(215, 20);
             this.tbMatKhau.TabIndex = 5;
-            this.tbMatKhau.UseSystemPasswordChar = true;
+            //this.tbMatKhau.TextChanged += new System.EventHandler(this.tbMatKhau_TextChanged);
             // 
             // label2
             // 
@@ -107,6 +107,7 @@
             this.ResumeLayout(false);
 
         }
+
 
         #endregion
 

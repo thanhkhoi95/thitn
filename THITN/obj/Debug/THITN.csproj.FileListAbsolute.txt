@@ -11,3 +11,5 @@ C:\Users\MyPC\Documents\Visual Studio 2013\Projects\THITN\THITN\obj\Debug\THITN.
 C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\bin\Debug\THITN.exe.config
 C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmMonHoc.resources
 C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmGiaoVien.resources
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmLop.resources
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmSinhVien.resources

@@ -135,19 +135,6 @@ namespace THITN
             tbMaMonHoc.Focus();
         }
 
-        private void fillByACTIVEToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.monhocTableAdapter.FillByACTIVE(this.cHUYEN_DEDataSet.Monhoc);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
-
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             monhocGridControl.Enabled = false;
@@ -197,11 +184,11 @@ namespace THITN
             {
                 monhocTableAdapter.Update(this.cHUYEN_DEDataSet);
                 this.monhocTableAdapter.Fill(this.cHUYEN_DEDataSet.Monhoc);
-                MessageBox.Show("Ghi thành công");
+                MessageBox.Show("Lưu cơ sở dữ liệu thành công");
             }
             catch (Exception)
             {
-                MessageBox.Show("Ghi bị lỗi");
+                MessageBox.Show("Lưu cơ sở dữ liệu bị lỗi");
             }
         }
 
