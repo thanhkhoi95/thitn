@@ -34,12 +34,10 @@ namespace THITN
 
         public static int KetNoi()
         {
-            if (Program.conn != null && Program.conn.State == ConnectionState.Open)
-                conn.Dispose();
-                conn = new SqlConnection();
-                Program.conn.Close();
+            conn = new SqlConnection();
             try
             {
+                
                 Program.connstr = "Data Source=" + Program.servername + ";Initial Catalog=" +
                       Program.database + ";User ID=" +
                       Program.mlogin + ";password=" + Program.password;

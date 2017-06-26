@@ -244,7 +244,6 @@ namespace THITN
             cmd.Parameters.AddWithValue("@TRINHDO", cbTrinhDo.Text.ToString().Trim());
             cmd.Parameters.AddWithValue("@NGAYTHI", deNgayThi.EditValue);
             cmd.Parameters.AddWithValue("@LAN", Int32.Parse(tbLanThi.Text.ToString().Trim()));
-            MessageBox.Show(tbLanThi.Text.ToString().Trim());
             cmd.Parameters.AddWithValue("@SOCAUTHI", socauhoi);
             cmd.Parameters.AddWithValue("@THOIGIAN", time);
             try

@@ -1,6 +1,5 @@
 c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\bin\Debug\THITN.exe
 c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\bin\Debug\THITN.pdb
-c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.csprojResolveAssemblyReference.cache
 c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmMain.resources
 c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.Properties.Resources.resources
 c:\users\mypc\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.csproj.GenerateResource.Cache
@@ -17,3 +16,7 @@ C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.
 C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmChuanBiThi.resources
 C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmThongTinThi.resources
 C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmSaoLuuPhucHoi.resources
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.frmThiTracNghiem.resources
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.XtraReport1.resources
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.Form2.resources
+C:\Users\MyPC\documents\visual studio 2013\Projects\THITN\THITN\obj\Debug\THITN.csprojResolveAssemblyReference.cache

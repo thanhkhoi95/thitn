@@ -190,5 +190,36 @@ namespace THITN
             }
         }
 
+        private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmThongTinThi));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmThongTinThi f = new frmThongTinThi();
+                f.MdiParent = this;
+                f.Text = "Thi trắc nghiệm";
+                f.Show();
+            }
+        }
+
+        private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(Form2));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                Form2 f = new Form2();
+                f.MdiParent = this;
+                f.Text = "Xem bảng điểm";
+                f.Show();
+            }
+        }
     }
 }
