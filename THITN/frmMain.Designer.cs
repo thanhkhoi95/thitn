@@ -33,7 +33,6 @@
             this.rcMain = new DevExpress.XtraBars.Ribbon.RibbonControl();
             this.btnDangNhap = new DevExpress.XtraBars.BarButtonItem();
             this.btnDangXuat = new DevExpress.XtraBars.BarButtonItem();
-            this.btnSaoLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
@@ -66,7 +65,6 @@
             this.rcMain.ExpandCollapseItem,
             this.btnDangNhap,
             this.btnDangXuat,
-            this.btnSaoLuu,
             this.btnPhucHoi,
             this.btnThoat,
             this.barButtonItem1,
@@ -105,19 +103,12 @@
             this.btnDangXuat.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.btnDangXuat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnDangXuat_ItemClick);
             // 
-            // btnSaoLuu
-            // 
-            this.btnSaoLuu.Caption = "Sao lưu";
-            this.btnSaoLuu.Glyph = ((System.Drawing.Image)(resources.GetObject("btnSaoLuu.Glyph")));
-            this.btnSaoLuu.Id = 3;
-            this.btnSaoLuu.Name = "btnSaoLuu";
-            this.btnSaoLuu.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
             // btnPhucHoi
             // 
-            this.btnPhucHoi.Caption = "Phục hồi";
+            this.btnPhucHoi.Caption = "Sao lưu - Phục hồi";
             this.btnPhucHoi.Glyph = ((System.Drawing.Image)(resources.GetObject("btnPhucHoi.Glyph")));
             this.btnPhucHoi.Id = 4;
+            this.btnPhucHoi.LargeWidth = 98;
             this.btnPhucHoi.Name = "btnPhucHoi";
             this.btnPhucHoi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnPhucHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhucHoi_ItemClick);
@@ -203,7 +194,6 @@
             // 
             this.rpgDuLieu.AllowTextClipping = false;
             this.rpgDuLieu.Enabled = false;
-            this.rpgDuLieu.ItemLinks.Add(this.btnSaoLuu);
             this.rpgDuLieu.ItemLinks.Add(this.btnPhucHoi);
             this.rpgDuLieu.Name = "rpgDuLieu";
             this.rpgDuLieu.ShowCaptionButton = false;
@@ -323,7 +313,6 @@
         private DevExpress.XtraBars.BarButtonItem btnDangXuat;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgDuLieu;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup rpgTaiKhoan;
-        private DevExpress.XtraBars.BarButtonItem btnSaoLuu;
         private DevExpress.XtraBars.BarButtonItem btnPhucHoi;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpGiaoVien;
         private DevExpress.XtraBars.Ribbon.RibbonPage rpSinhVien;

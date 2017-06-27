@@ -73,11 +73,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CHUYEN_DEDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmSaoLuuPhucHoi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmSaoLuuPhucHoi.Designer.cs">
+      <DependentUpon>frmSaoLuuPhucHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBoDe.cs">
       <SubType>Form</SubType>
@@ -145,8 +145,8 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CForm1.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmSaoLuuPhucHoi.resx">
+      <DependentUpon>frmSaoLuuPhucHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBoDe.resx">
       <DependentUpon>frmBoDe.cs</DependentUpon>

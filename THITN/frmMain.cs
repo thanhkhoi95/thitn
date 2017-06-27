@@ -176,16 +176,16 @@ namespace THITN
 
         private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            Form frm = this.KiemTraTonTai(typeof(Form1));
+            Form frm = this.KiemTraTonTai(typeof(frmSaoLuuPhucHoi));
             if (frm != null)
             {
                 frm.Activate();
             }
             else
             {
-                Form1 f = new Form1();
+                frmSaoLuuPhucHoi f = new frmSaoLuuPhucHoi();
                 f.MdiParent = this;
-                f.Text = "Phục hồi";
+                f.Text = "Sao lưu & phục hồi dữ liệu";
                 f.Show();
             }
         }

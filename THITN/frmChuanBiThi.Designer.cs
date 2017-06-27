@@ -34,7 +34,16 @@
             this.giaovien_DangkyTableAdapter = new THITN.CHUYEN_DEDataSetTableAdapters.Giaovien_DangkyTableAdapter();
             this.tableAdapterManager = new THITN.CHUYEN_DEDataSetTableAdapters.TableAdapterManager();
             this.giaovien_DangkyGridControl = new DevExpress.XtraGrid.GridControl();
+            this.giaovienDangkyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMAGV = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTRINHDO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNGAYTHI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLAN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSOCAUTHI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTHOIGIAN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThoat = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -57,25 +66,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.monhocTableAdapter = new THITN.CHUYEN_DEDataSetTableAdapters.MonhocTableAdapter();
             this.lopTableAdapter = new THITN.CHUYEN_DEDataSetTableAdapters.LopTableAdapter();
-            this.colMAGV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMALOP = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMAMH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTRINHDO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNGAYTHI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSOCAUTHI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTHOIGIAN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.giaovienDangkyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.cHUYEN_DEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovien_DangkyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovien_DangkyGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giaovienDangkyBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayThi.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.deNgayThi.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.monhocBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.giaovienDangkyBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // cHUYEN_DEDataSet
@@ -116,6 +116,11 @@
             this.giaovien_DangkyGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // giaovienDangkyBindingSource
+            // 
+            this.giaovienDangkyBindingSource.DataMember = "Giaovien_Dangky";
+            this.giaovienDangkyBindingSource.DataSource = this.cHUYEN_DEDataSet;
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -130,6 +135,118 @@
             this.gridView1.GridControl = this.giaovien_DangkyGridControl;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // colMAGV
+            // 
+            this.colMAGV.FieldName = "MAGV";
+            this.colMAGV.Name = "colMAGV";
+            this.colMAGV.OptionsColumn.AllowEdit = false;
+            this.colMAGV.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colMAGV.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colMAGV.OptionsColumn.AllowMove = false;
+            this.colMAGV.OptionsColumn.AllowSize = false;
+            this.colMAGV.OptionsColumn.ShowInCustomizationForm = false;
+            this.colMAGV.OptionsColumn.ShowInExpressionEditor = false;
+            this.colMAGV.Visible = true;
+            this.colMAGV.VisibleIndex = 0;
+            // 
+            // colMALOP
+            // 
+            this.colMALOP.FieldName = "MALOP";
+            this.colMALOP.Name = "colMALOP";
+            this.colMALOP.OptionsColumn.AllowEdit = false;
+            this.colMALOP.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colMALOP.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colMALOP.OptionsColumn.AllowMove = false;
+            this.colMALOP.OptionsColumn.AllowShowHide = false;
+            this.colMALOP.OptionsColumn.ShowInCustomizationForm = false;
+            this.colMALOP.OptionsColumn.ShowInExpressionEditor = false;
+            this.colMALOP.Visible = true;
+            this.colMALOP.VisibleIndex = 1;
+            // 
+            // colMAMH
+            // 
+            this.colMAMH.FieldName = "MAMH";
+            this.colMAMH.Name = "colMAMH";
+            this.colMAMH.OptionsColumn.AllowEdit = false;
+            this.colMAMH.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colMAMH.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colMAMH.OptionsColumn.AllowMove = false;
+            this.colMAMH.OptionsColumn.AllowShowHide = false;
+            this.colMAMH.OptionsColumn.ShowInCustomizationForm = false;
+            this.colMAMH.OptionsColumn.ShowInExpressionEditor = false;
+            this.colMAMH.Visible = true;
+            this.colMAMH.VisibleIndex = 2;
+            // 
+            // colTRINHDO
+            // 
+            this.colTRINHDO.FieldName = "TRINHDO";
+            this.colTRINHDO.Name = "colTRINHDO";
+            this.colTRINHDO.OptionsColumn.AllowEdit = false;
+            this.colTRINHDO.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colTRINHDO.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colTRINHDO.OptionsColumn.AllowMove = false;
+            this.colTRINHDO.OptionsColumn.AllowShowHide = false;
+            this.colTRINHDO.OptionsColumn.ShowInCustomizationForm = false;
+            this.colTRINHDO.OptionsColumn.ShowInExpressionEditor = false;
+            this.colTRINHDO.Visible = true;
+            this.colTRINHDO.VisibleIndex = 3;
+            // 
+            // colNGAYTHI
+            // 
+            this.colNGAYTHI.FieldName = "NGAYTHI";
+            this.colNGAYTHI.Name = "colNGAYTHI";
+            this.colNGAYTHI.OptionsColumn.AllowEdit = false;
+            this.colNGAYTHI.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colNGAYTHI.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colNGAYTHI.OptionsColumn.AllowMove = false;
+            this.colNGAYTHI.OptionsColumn.AllowShowHide = false;
+            this.colNGAYTHI.OptionsColumn.ShowInCustomizationForm = false;
+            this.colNGAYTHI.OptionsColumn.ShowInExpressionEditor = false;
+            this.colNGAYTHI.Visible = true;
+            this.colNGAYTHI.VisibleIndex = 4;
+            // 
+            // colLAN
+            // 
+            this.colLAN.FieldName = "LAN";
+            this.colLAN.Name = "colLAN";
+            this.colLAN.OptionsColumn.AllowEdit = false;
+            this.colLAN.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colLAN.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colLAN.OptionsColumn.AllowMove = false;
+            this.colLAN.OptionsColumn.AllowShowHide = false;
+            this.colLAN.OptionsColumn.ShowInCustomizationForm = false;
+            this.colLAN.OptionsColumn.ShowInExpressionEditor = false;
+            this.colLAN.Visible = true;
+            this.colLAN.VisibleIndex = 5;
+            // 
+            // colSOCAUTHI
+            // 
+            this.colSOCAUTHI.FieldName = "SOCAUTHI";
+            this.colSOCAUTHI.Name = "colSOCAUTHI";
+            this.colSOCAUTHI.OptionsColumn.AllowEdit = false;
+            this.colSOCAUTHI.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colSOCAUTHI.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colSOCAUTHI.OptionsColumn.AllowMove = false;
+            this.colSOCAUTHI.OptionsColumn.AllowShowHide = false;
+            this.colSOCAUTHI.OptionsColumn.ShowInCustomizationForm = false;
+            this.colSOCAUTHI.OptionsColumn.ShowInExpressionEditor = false;
+            this.colSOCAUTHI.Visible = true;
+            this.colSOCAUTHI.VisibleIndex = 6;
+            // 
+            // colTHOIGIAN
+            // 
+            this.colTHOIGIAN.FieldName = "THOIGIAN";
+            this.colTHOIGIAN.Name = "colTHOIGIAN";
+            this.colTHOIGIAN.OptionsColumn.AllowEdit = false;
+            this.colTHOIGIAN.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colTHOIGIAN.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colTHOIGIAN.OptionsColumn.AllowMove = false;
+            this.colTHOIGIAN.OptionsColumn.AllowShowHide = false;
+            this.colTHOIGIAN.OptionsColumn.ShowInCustomizationForm = false;
+            this.colTHOIGIAN.OptionsColumn.ShowInExpressionEditor = false;
+            this.colTHOIGIAN.Visible = true;
+            this.colTHOIGIAN.VisibleIndex = 7;
             // 
             // panel1
             // 
@@ -275,24 +392,27 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label7.Location = new System.Drawing.Point(532, 57);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 13);
+            this.label7.Size = new System.Drawing.Size(69, 13);
             this.label7.TabIndex = 6;
             this.label7.Text = "Thời gian thi:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.Location = new System.Drawing.Point(355, 105);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 13);
+            this.label6.Size = new System.Drawing.Size(51, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Ngày thi:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.Location = new System.Drawing.Point(355, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(58, 13);
@@ -302,15 +422,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.Location = new System.Drawing.Point(242, 57);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
+            this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Lần thi:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.Location = new System.Drawing.Point(242, 105);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
@@ -320,15 +442,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(36, 105);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã môn học:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.Location = new System.Drawing.Point(36, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 13);
@@ -343,67 +467,6 @@
             // 
             this.lopTableAdapter.ClearBeforeFill = true;
             // 
-            // colMAGV
-            // 
-            this.colMAGV.FieldName = "MAGV";
-            this.colMAGV.Name = "colMAGV";
-            this.colMAGV.Visible = true;
-            this.colMAGV.VisibleIndex = 0;
-            // 
-            // colMALOP
-            // 
-            this.colMALOP.FieldName = "MALOP";
-            this.colMALOP.Name = "colMALOP";
-            this.colMALOP.Visible = true;
-            this.colMALOP.VisibleIndex = 1;
-            // 
-            // colMAMH
-            // 
-            this.colMAMH.FieldName = "MAMH";
-            this.colMAMH.Name = "colMAMH";
-            this.colMAMH.Visible = true;
-            this.colMAMH.VisibleIndex = 2;
-            // 
-            // colTRINHDO
-            // 
-            this.colTRINHDO.FieldName = "TRINHDO";
-            this.colTRINHDO.Name = "colTRINHDO";
-            this.colTRINHDO.Visible = true;
-            this.colTRINHDO.VisibleIndex = 3;
-            // 
-            // colNGAYTHI
-            // 
-            this.colNGAYTHI.FieldName = "NGAYTHI";
-            this.colNGAYTHI.Name = "colNGAYTHI";
-            this.colNGAYTHI.Visible = true;
-            this.colNGAYTHI.VisibleIndex = 4;
-            // 
-            // colLAN
-            // 
-            this.colLAN.FieldName = "LAN";
-            this.colLAN.Name = "colLAN";
-            this.colLAN.Visible = true;
-            this.colLAN.VisibleIndex = 5;
-            // 
-            // colSOCAUTHI
-            // 
-            this.colSOCAUTHI.FieldName = "SOCAUTHI";
-            this.colSOCAUTHI.Name = "colSOCAUTHI";
-            this.colSOCAUTHI.Visible = true;
-            this.colSOCAUTHI.VisibleIndex = 6;
-            // 
-            // colTHOIGIAN
-            // 
-            this.colTHOIGIAN.FieldName = "THOIGIAN";
-            this.colTHOIGIAN.Name = "colTHOIGIAN";
-            this.colTHOIGIAN.Visible = true;
-            this.colTHOIGIAN.VisibleIndex = 7;
-            // 
-            // giaovienDangkyBindingSource
-            // 
-            this.giaovienDangkyBindingSource.DataMember = "Giaovien_Dangky";
-            this.giaovienDangkyBindingSource.DataSource = this.cHUYEN_DEDataSet;
-            // 
             // frmChuanBiThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -417,6 +480,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cHUYEN_DEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovien_DangkyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovien_DangkyGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.giaovienDangkyBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -424,7 +488,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.deNgayThi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lopBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.monhocBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.giaovienDangkyBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
