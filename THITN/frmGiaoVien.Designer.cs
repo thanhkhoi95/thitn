@@ -44,6 +44,8 @@
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
+            this.tbTimKiem = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemTextEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -79,6 +81,7 @@
             sODTLLLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUYEN_DEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovienGridControl)).BeginInit();
@@ -158,9 +161,12 @@
             this.btnXoa,
             this.btnPhucHoi,
             this.btnLuu,
-            this.btnThoat});
+            this.btnThoat,
+            this.tbTimKiem});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 6;
+            this.barManager1.MaxItemId = 7;
+            this.barManager1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemTextEdit1});
             // 
             // bar2
             // 
@@ -174,7 +180,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPhucHoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLuu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(this.tbTimKiem)});
             this.bar2.OptionsBar.AllowQuickCustomization = false;
             this.bar2.OptionsBar.DisableClose = true;
             this.bar2.OptionsBar.DisableCustomization = true;
@@ -235,6 +242,18 @@
             this.btnThoat.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnThoat.LargeGlyph")));
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnThoat_ItemClick);
+            // 
+            // tbTimKiem
+            // 
+            this.tbTimKiem.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.tbTimKiem.Edit = this.repositoryItemTextEdit1;
+            this.tbTimKiem.Id = 6;
+            this.tbTimKiem.Name = "tbTimKiem";
+            // 
+            // repositoryItemTextEdit1
+            // 
+            this.repositoryItemTextEdit1.AutoHeight = false;
+            this.repositoryItemTextEdit1.Name = "repositoryItemTextEdit1";
             // 
             // barDockControlTop
             // 
@@ -434,6 +453,7 @@
             // lbMatKhau
             // 
             this.lbMatKhau.AutoSize = true;
+            this.lbMatKhau.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lbMatKhau.Location = new System.Drawing.Point(419, 81);
             this.lbMatKhau.Name = "lbMatKhau";
             this.lbMatKhau.Size = new System.Drawing.Size(55, 13);
@@ -514,6 +534,7 @@
             this.tbSoDienThoai.Name = "tbSoDienThoai";
             this.tbSoDienThoai.Size = new System.Drawing.Size(100, 20);
             this.tbSoDienThoai.TabIndex = 17;
+            this.tbSoDienThoai.EditValueChanged += new System.EventHandler(this.tbSoDienThoai_EditValueChanged);
             // 
             // tbDiaChi
             // 
@@ -560,6 +581,7 @@
             this.Text = "frmGiaoVien";
             this.Load += new System.EventHandler(this.frmGiaoVien_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemTextEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUYEN_DEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovienGridControl)).EndInit();
@@ -617,5 +639,7 @@
         private System.Windows.Forms.BindingSource giaovienBindingSource1;
         private System.Windows.Forms.BindingSource cHUYENDEDataSetBindingSource;
         private System.Windows.Forms.Label lbMatKhau;
+        private DevExpress.XtraBars.BarEditItem tbTimKiem;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit repositoryItemTextEdit1;
     }
 }

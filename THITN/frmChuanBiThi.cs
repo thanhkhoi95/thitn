@@ -68,6 +68,7 @@ namespace THITN
                     case "2":
                         {
                             MessageBox.Show("không thể tổ chức thi nữa");
+                            tbLanThi.Text = "";
                             break;
                         }
                     case "1":
@@ -109,6 +110,7 @@ namespace THITN
                     case "2":
                         {
                             MessageBox.Show("không thể tổ chức thi nữa");
+                            tbLanThi.Text = "";
                             break;
                         }
                     case "1":
@@ -130,6 +132,7 @@ namespace THITN
             if (tbSoCau.ReadOnly == true) return;
             try
             {
+                if (tbSoCau.Text == null || this.tbSoCau.Text.ToString().Trim() == "") return;
                 Int32.Parse(this.tbSoCau.Text);
             }
             catch (FormatException)
@@ -137,7 +140,7 @@ namespace THITN
                 MessageBox.Show("Chỉ được nhập số");
                 if (tbSoCau.Text.ToString().Trim().Length == 0) return;
                 tbSoCau.ReadOnly = true;
-                tbSoCau.Text = tbSoCau.Text.ToString().Trim().Substring(0, tbSoCau.Text.ToString().Trim().Length - 1);
+                tbSoCau.Text = tbSoCau.Text.ToString().Trim().Substring(0, tbSoCau.Text.ToString().Trim().Length - 1).Trim();
                 tbSoCau.ReadOnly = false;
                 tbSoCau.SelectionStart = tbSoCau.Text.Length;
             }

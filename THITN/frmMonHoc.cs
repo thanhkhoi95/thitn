@@ -221,7 +221,7 @@ namespace THITN
             {
                 if (f.GetType() == typeof(frmBoDe))
                 {
-                    frmSinhVien form = (frmSinhVien)f;
+                    frmBoDe form = (frmBoDe)f;
                     if (form.isMe(row["MAMH"].ToString().Trim()))
                     {
                         f.Activate();

@@ -308,12 +308,7 @@ namespace THITN
                     return;
                 }
             }
-            if (isAdding && tbMatKhau.Equals(""))
-            {
-                MessageBox.Show(i + "Vui lòng nhập đầy đủ thông tin");
-                return;
-            }
-            if (tbMatKhau.Text == "")
+            if (isAdding && tbMatKhau.Text == "")
             {
                 MessageBox.Show(i + "Vui lòng nhập đầy đủ thông tin");
                 return;
@@ -354,6 +349,30 @@ namespace THITN
                 lbMatKhau.Visible = false;
                 isAdding = false;
             }
+        }
+
+        private void tbSoDienThoai_EditValueChanged(object sender, EventArgs e)
+        {
+            if (tbSoDienThoai.ReadOnly == true) return;
+            try
+            {
+                if (this.tbSoDienThoai.Text == null || this.tbSoDienThoai.Text.ToString().Trim() == "") return;
+                Int32.Parse(this.tbSoDienThoai.Text);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Chỉ được nhập số");
+                if (tbSoDienThoai.Text.ToString().Trim().Length == 0) return;
+                tbSoDienThoai.ReadOnly = true;
+                tbSoDienThoai.Text = tbSoDienThoai.Text.ToString().Trim().Substring(0, tbSoDienThoai.Text.ToString().Trim().Length - 1).Trim();
+                tbSoDienThoai.ReadOnly = false;
+                tbSoDienThoai.SelectionStart = tbSoDienThoai.Text.Length;
+            }
+        }
+
+        private void tbTimKiem_EditValueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show("fuckkkkkk");
         }
     }
 }
