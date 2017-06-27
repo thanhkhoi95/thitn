@@ -40,7 +40,6 @@
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.rpHeThong = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.rpgTaiKhoan = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -74,7 +73,6 @@
             this.barButtonItem2,
             this.barButtonItem4,
             this.barButtonItem6,
-            this.barButtonItem5,
             this.barButtonItem3});
             this.rcMain.Location = new System.Drawing.Point(0, 0);
             this.rcMain.Margin = new System.Windows.Forms.Padding(4);
@@ -122,6 +120,7 @@
             this.btnPhucHoi.Id = 4;
             this.btnPhucHoi.Name = "btnPhucHoi";
             this.btnPhucHoi.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.btnPhucHoi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnPhucHoi_ItemClick);
             // 
             // btnThoat
             // 
@@ -155,9 +154,10 @@
             // 
             // barButtonItem4
             // 
-            this.barButtonItem4.Caption = "Môn học";
+            this.barButtonItem4.Caption = "Môn học - Bộ đề";
             this.barButtonItem4.Glyph = global::THITN.Properties.Resources.book;
             this.barButtonItem4.Id = 11;
+            this.barButtonItem4.LargeWidth = 89;
             this.barButtonItem4.Name = "barButtonItem4";
             this.barButtonItem4.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem4_ItemClick);
@@ -170,14 +170,7 @@
             this.barButtonItem6.LargeWidth = 70;
             this.barButtonItem6.Name = "barButtonItem6";
             this.barButtonItem6.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "Bộ đề";
-            this.barButtonItem5.Glyph = global::THITN.Properties.Resources.checklist;
-            this.barButtonItem5.Id = 14;
-            this.barButtonItem5.Name = "barButtonItem5";
-            this.barButtonItem5.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
+            this.barButtonItem6.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem6_ItemClick_1);
             // 
             // barButtonItem3
             // 
@@ -248,7 +241,6 @@
             // 
             this.ribbonPageGroup3.AllowTextClipping = false;
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem6);
-            this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem5);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem4);
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem3);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
@@ -346,7 +338,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
     }

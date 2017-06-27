@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label mAMHLabel;
             System.Windows.Forms.Label tENMHLabel;
-            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMonHoc));
             this.cHUYEN_DEDataSet = new THITN.CHUYEN_DEDataSet();
             this.monhocBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -58,6 +58,7 @@
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
             this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnThoat = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -126,9 +127,9 @@
             // 
             this.monhocGridControl.DataSource = this.monhocBindingSource;
             this.monhocGridControl.Dock = System.Windows.Forms.DockStyle.Top;
-            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level1";
             this.monhocGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
-            gridLevelNode1});
+            gridLevelNode2});
             this.monhocGridControl.Location = new System.Drawing.Point(0, 24);
             this.monhocGridControl.MainView = this.gridView1;
             this.monhocGridControl.Name = "monhocGridControl";
@@ -145,6 +146,7 @@
             this.colACTIVE});
             this.gridView1.GridControl = this.monhocGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colMAMH
             // 
@@ -279,9 +281,10 @@
             this.btnXoa,
             this.btnPhucHoi,
             this.btnLuu,
-            this.btnThoat});
+            this.btnThoat,
+            this.barButtonItem1});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 6;
+            this.barManager1.MaxItemId = 7;
             // 
             // bar2
             // 
@@ -295,6 +298,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnXoa, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnPhucHoi, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnLuu, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.barButtonItem1, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
             new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.PaintStyle, this.btnThoat, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph)});
             this.bar2.OptionsBar.DisableCustomization = true;
             this.bar2.OptionsBar.DrawDragBorder = false;
@@ -354,6 +358,14 @@
             this.btnThoat.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnThoat.LargeGlyph")));
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_1);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Quản lí bộ đề";
+            this.barButtonItem1.Glyph = global::THITN.Properties.Resources.contract__1_;
+            this.barButtonItem1.Id = 6;
+            this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick_2);
             // 
             // barDockControlTop
             // 
@@ -446,5 +458,6 @@
         private DevExpress.XtraBars.BarButtonItem btnPhucHoi;
         private DevExpress.XtraBars.BarButtonItem btnLuu;
         private DevExpress.XtraBars.BarButtonItem btnThoat;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }
 }

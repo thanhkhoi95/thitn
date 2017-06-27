@@ -313,6 +313,11 @@ namespace THITN
                 MessageBox.Show(i + "Vui lòng nhập đầy đủ thông tin");
                 return;
             }
+            if (tbMatKhau.Text == "")
+            {
+                MessageBox.Show(i + "Vui lòng nhập đầy đủ thông tin");
+                return;
+            }
             row["ACTIVE"] = 1;
             try
             {
@@ -347,6 +352,7 @@ namespace THITN
                 tbMatKhau.Text = "";
                 tbMatKhau.Visible = false;
                 lbMatKhau.Visible = false;
+                isAdding = false;
             }
         }
     }

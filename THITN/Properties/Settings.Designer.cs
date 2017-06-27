@@ -42,5 +42,16 @@ namespace THITN.Properties {
                 return ((string)(this["CHUYEN_DEConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MY-VKK4I8VUSG81\\TRACNGHIEM;Initial Catalog=master;User ID=SA;Password" +
+            "=123")]
+        public string masterConnectionString {
+            get {
+                return ((string)(this["masterConnectionString"]));
+            }
+        }
     }
 }

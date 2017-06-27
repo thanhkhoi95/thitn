@@ -141,11 +141,19 @@
             this.colTENLOP});
             this.gridView1.GridControl = this.lopGridControl;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colMALOP
             // 
             this.colMALOP.FieldName = "MALOP";
             this.colMALOP.Name = "colMALOP";
+            this.colMALOP.OptionsColumn.AllowEdit = false;
+            this.colMALOP.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colMALOP.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colMALOP.OptionsColumn.AllowMove = false;
+            this.colMALOP.OptionsColumn.AllowShowHide = false;
+            this.colMALOP.OptionsColumn.ShowInCustomizationForm = false;
+            this.colMALOP.OptionsColumn.ShowInExpressionEditor = false;
             this.colMALOP.Visible = true;
             this.colMALOP.VisibleIndex = 0;
             this.colMALOP.Width = 244;
@@ -154,6 +162,13 @@
             // 
             this.colTENLOP.FieldName = "TENLOP";
             this.colTENLOP.Name = "colTENLOP";
+            this.colTENLOP.OptionsColumn.AllowEdit = false;
+            this.colTENLOP.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.False;
+            this.colTENLOP.OptionsColumn.AllowMerge = DevExpress.Utils.DefaultBoolean.False;
+            this.colTENLOP.OptionsColumn.AllowMove = false;
+            this.colTENLOP.OptionsColumn.AllowShowHide = false;
+            this.colTENLOP.OptionsColumn.ShowInCustomizationForm = false;
+            this.colTENLOP.OptionsColumn.ShowInExpressionEditor = false;
             this.colTENLOP.Visible = true;
             this.colTENLOP.VisibleIndex = 1;
             this.colTENLOP.Width = 991;

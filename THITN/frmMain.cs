@@ -158,5 +158,37 @@ namespace THITN
 
         }
 
+        private void barButtonItem6_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(frmChuanBiThi));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                frmChuanBiThi f = new frmChuanBiThi();
+                f.MdiParent = this;
+                f.Text = "Chuẩn bị thi";
+                f.Show();
+            }
+        }
+
+        private void btnPhucHoi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form frm = this.KiemTraTonTai(typeof(Form1));
+            if (frm != null)
+            {
+                frm.Activate();
+            }
+            else
+            {
+                Form1 f = new Form1();
+                f.MdiParent = this;
+                f.Text = "Phục hồi";
+                f.Show();
+            }
+        }
+
     }
 }

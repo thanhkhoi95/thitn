@@ -61,6 +61,7 @@
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colACTIVE = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbMatKhau = new System.Windows.Forms.Label();
             this.tbMatKhau = new System.Windows.Forms.TextBox();
             this.btnHoanTat = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -77,7 +78,6 @@
             tENLabel = new System.Windows.Forms.Label();
             sODTLLLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
-            this.lbMatKhau = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cHUYEN_DEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.giaovienBindingSource)).BeginInit();
@@ -142,17 +142,6 @@
             dIACHILabel.Size = new System.Drawing.Size(43, 13);
             dIACHILabel.TabIndex = 18;
             dIACHILabel.Text = "Địa chỉ:";
-            // 
-            // lbMatKhau
-            // 
-            lbMatKhau.AutoSize = true;
-            lbMatKhau.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            lbMatKhau.Location = new System.Drawing.Point(419, 77);
-            lbMatKhau.Name = "lbMatKhau";
-            lbMatKhau.Size = new System.Drawing.Size(55, 13);
-            lbMatKhau.TabIndex = 18;
-            lbMatKhau.Text = "Mật khẩu:";
-            lbMatKhau.Visible = false;
             // 
             // barManager1
             // 
@@ -331,6 +320,7 @@
             this.gridView1.OptionsCustomization.AllowColumnMoving = false;
             this.gridView1.OptionsCustomization.AllowGroup = false;
             this.gridView1.OptionsCustomization.AllowQuickHideColumns = false;
+            this.gridView1.OptionsView.ShowGroupPanel = false;
             // 
             // colMAGV
             // 
@@ -420,6 +410,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbMatKhau);
             this.panel1.Controls.Add(this.tbMatKhau);
             this.panel1.Controls.Add(this.btnHoanTat);
             this.panel1.Controls.Add(this.btnHuy);
@@ -431,7 +422,6 @@
             this.panel1.Controls.Add(this.tbTen);
             this.panel1.Controls.Add(sODTLLLabel);
             this.panel1.Controls.Add(this.tbSoDienThoai);
-            this.panel1.Controls.Add(lbMatKhau);
             this.panel1.Controls.Add(dIACHILabel);
             this.panel1.Controls.Add(this.tbDiaChi);
             this.panel1.Controls.Add(this.label2);
@@ -440,6 +430,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(899, 139);
             this.panel1.TabIndex = 6;
+            // 
+            // lbMatKhau
+            // 
+            this.lbMatKhau.AutoSize = true;
+            this.lbMatKhau.Location = new System.Drawing.Point(419, 81);
+            this.lbMatKhau.Name = "lbMatKhau";
+            this.lbMatKhau.Size = new System.Drawing.Size(55, 13);
+            this.lbMatKhau.TabIndex = 24;
+            this.lbMatKhau.Text = "Mật khẩu:";
             // 
             // tbMatKhau
             // 
@@ -451,7 +450,6 @@
             this.tbMatKhau.UseSystemPasswordChar = true;
             this.tbMatKhau.Visible = false;
             this.tbMatKhau.WordWrap = false;
-            this.tbMatKhau.Visible = false;
             // 
             // btnHoanTat
             // 

@@ -12,8 +12,11 @@ namespace THITN
 {
     public partial class frmLop : Form
     {
+
+        private bool isSaved;
         public frmLop()
         {
+            isSaved = true;
             InitializeComponent();
         }
 
@@ -40,6 +43,7 @@ namespace THITN
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            isSaved = false;
             lopGridControl.Enabled = false;
             btnThem.Enabled = false;
             btnLuu.Enabled = false;
@@ -56,13 +60,14 @@ namespace THITN
             try
             {
                 lopTableAdapter.Update(this.cHUYEN_DEDataSet);
-                this.lopTableAdapter.Fill(this.cHUYEN_DEDataSet.Lop);
                 MessageBox.Show("Lưu cơ sở dữ liệu thành công");
             }
             catch (Exception)
             {
                 MessageBox.Show("Lưu cơ sở dữ liệu bị lỗi");
             }
+            isSaved = true;
+            this.lopTableAdapter.Fill(this.cHUYEN_DEDataSet.Lop);
         }
 
         private void btnHoanTat_Click(object sender, EventArgs e)
@@ -114,6 +119,11 @@ namespace THITN
 
         private void btnQlsv_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            if (!isSaved)
+            {
+                MessageBox.Show("Vui lòng lưu dữ liệu trước.");
+                return;
+            }
             DataRow row = gridView1.GetFocusedDataRow();
             foreach (Form f in Program.mainForm.MdiChildren)
             {
@@ -130,7 +140,7 @@ namespace THITN
             frmSinhVien newForm = new frmSinhVien(row["MALOP"].ToString().Trim(), row["TENLOP"].ToString().Trim()) 
             {
                 MdiParent = Program.mainForm, 
-                Text = string.Format("Quản lí sinh vien (Lớp: {0})", row["TENLOP"].ToString().Trim()) 
+                Text = string.Format("Quản lí sinh viên (Lớp: {0})", row["TENLOP"].ToString().Trim()) 
             };
             newForm.Show();
         }

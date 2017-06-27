@@ -12,8 +12,11 @@ namespace THITN
 {
     public partial class frmMonHoc : Form
     {
+
+        private bool isSaved;
         public frmMonHoc()
         {
+            isSaved = true;
             InitializeComponent();
         }
 
@@ -84,6 +87,7 @@ namespace THITN
 
         private void btnHoantat_Click(object sender, EventArgs e)
         {
+            isSaved = false;
             DataRow row = gridView1.GetFocusedDataRow();
             for (int i = 0; i < 2; i++)
             {
@@ -153,6 +157,7 @@ namespace THITN
 
         private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            isSaved = false;
             monhocGridControl.Enabled = false;
             btnThem.Enabled = false;
             btnSua.Enabled = false;
@@ -161,35 +166,37 @@ namespace THITN
             btnLuu.Enabled = false;
             btnHoanTat.Enabled = true;
             btnHuy.Enabled = true;
-            tbMaMonHoc.Enabled = true;
             tbTenMonHoc.Enabled = true;
             tbMaMonHoc.Focus();
         }
 
         private void barButtonItem3_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            isSaved = false;
             DataRow row = gridView1.GetFocusedDataRow();
             row["ACTIVE"] = 0;
         }
 
         private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            isSaved = false;
             DataRow row = gridView1.GetFocusedDataRow();
             row["ACTIVE"] = 1;
         }
 
         private void barButtonItem5_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            isSaved = true;
             try
             {
                 monhocTableAdapter.Update(this.cHUYEN_DEDataSet);
-                this.monhocTableAdapter.Fill(this.cHUYEN_DEDataSet.Monhoc);
                 MessageBox.Show("Lưu cơ sở dữ liệu thành công");
             }
             catch (Exception)
             {
                 MessageBox.Show("Lưu cơ sở dữ liệu bị lỗi");
             }
+            this.monhocTableAdapter.Fill(this.cHUYEN_DEDataSet.Monhoc);
         }
 
         private void barButtonItem1_ItemClick_1(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -202,5 +209,32 @@ namespace THITN
 
         }
 
+        private void barButtonItem1_ItemClick_2(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            if (!isSaved)
+            {
+                MessageBox.Show("Vui lòng lưu dữ liệu trước.");
+                return;
+            }
+            DataRow row = gridView1.GetFocusedDataRow();
+            foreach (Form f in Program.mainForm.MdiChildren)
+            {
+                if (f.GetType() == typeof(frmBoDe))
+                {
+                    frmSinhVien form = (frmSinhVien)f;
+                    if (form.isMe(row["MAMH"].ToString().Trim()))
+                    {
+                        f.Activate();
+                        return;
+                    }
+                }
+            }
+            frmBoDe newForm = new frmBoDe(row["MAMH"].ToString().Trim(), row["TENMH"].ToString().Trim())
+            {
+                MdiParent = Program.mainForm,
+                Text = string.Format("Quản lí bộ đề (Môn học: {0})", row["TENMH"].ToString().Trim())
+            };
+            newForm.Show();
+        }
     }
 }
